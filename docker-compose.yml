@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  postgres:
+      image: postgres:10.5
+      restart: always
+      container_name: postgres
+      environment:
+      - POSTGRES_NAME=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=Pass2020!
+      ports:
+      - 5432
+      volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+  django:
+   build: .
+   container_name: qr-app
+   environment:
+      - DB_PASS=password
+   depends_on:
+      - postgres
+   volumes:
+      - .:/fileshare
+   ports:
+      - "8000:8000"
+   command:  bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"

@@ -1,0 +1,48 @@
+pdf menu
+--------------------
+1. scan qr to read pdf
+2. generate qr by admin
+3. replace or add menu by admin
+4. search via filters in the home page
+
+
+Shop 
+-------------
+shop name : hilal al barsha
+location e.g : Al barsha 1
+emirate e.g : sharjah
+google location link 
+lat long
+logo image
+slug
+created_at
+modified_at
+
+Address
+---------------
+country
+emirate
+street
+Address
+lat,long
+google link
+
+
+
+
+Menu
+-------
+pdf data
+created_at
+
+
+
+Roles
+-------
+anonymous user
+logged-in user(future)
+shop modifier-admin
+overall modifier-admin
+
+
+
