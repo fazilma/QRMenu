@@ -1,4 +1,4 @@
-"""QRMenu URL Configuration
+"""qr_menu URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('menu/', include('pdfMenu.urls')),
+    path('menu/', include('pdf_menu.urls')),
+    path('', include('all_menu.urls')),
+    
 ]
